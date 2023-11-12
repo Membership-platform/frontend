@@ -2,11 +2,12 @@ import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../hooks/redux-hooks'
 import { Navigate } from 'react-router-dom'
+import { usersData } from '../slices/userSlice'
 
 const ProtectedLayout = () => {
-	const basicUserInfo = useAppSelector((state) => state.auth.basicUserInfo)
+	const userResponse = useAppSelector(usersData)
 
-	console.log('basicUserInfo: ', basicUserInfo)
+	const basicUserInfo = useAppSelector((state) => state.auth.basicUserInfo)
 
 	if (!basicUserInfo) {
 		return <Navigate replace to={'/login'} />

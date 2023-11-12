@@ -149,6 +149,8 @@ const authSlice = createSlice({
 				state.error = null
 			})
 			.addCase(signout.fulfilled, (state, action) => {
+				console.log('action ==>>>', action)
+
 				state.status = 'idle'
 				state.basicUserInfo = null
 			})

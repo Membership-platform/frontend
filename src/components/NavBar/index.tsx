@@ -20,11 +20,10 @@ const NavBar = () => {
 	return (
 		<div className="NavBar">
 			<nav className="menu">
-				<div className="menu__logo">
-					<a href="">Logo</a>
-				</div>
 				<div className="menu__container">
-					<div className="menu_left"></div>
+					<div className="menu_left">
+						<LeftMenu mode="horizontal" />
+					</div>
 					<div className="menu_rigth">
 						<RightMenu mode="horizontal" />
 					</div>
@@ -32,7 +31,7 @@ const NavBar = () => {
 						className="menu__mobile-button"
 						type="primary"
 						onClick={showDrawer}>
-						okk
+						Open
 					</Button>
 					<Drawer
 						title="Basic Drawer"

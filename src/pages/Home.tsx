@@ -1,10 +1,14 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
+import { Col, Row } from 'antd'
 
 const Home = () => {
 	return (
 		<div>
-			<NavBar />
+			<Row>
+				<Col span={22} offset={1}>
+					List Reports here
+				</Col>
+			</Row>
 		</div>
 	)
 }
